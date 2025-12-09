@@ -127,7 +127,7 @@ class BrightnessResponse(Response):
     outputs: BrightnessOutputs
 
 class BrightnessExecutor(Config):
-    name: Literal["BrightnessExecutor"] = "BrightnessExecutor"
+    name: Literal["Brightness"] = "Brightness"
     value: Union[BrightnessRequest, BrightnessResponse]
     type: Literal["object"] = "object"
     field: Literal["option"] = "option"
@@ -207,7 +207,7 @@ class MixerResponse(Response):
     outputs: MixerOutputs
 
 class MixerExecutor(Config):
-    name: Literal["MixerExecutor"] = "MixerExecutor"
+    name: Literal["Mixer"] = "Mixer"
     value: Union[MixerRequest, MixerResponse]
     type: Literal["object"] = "object"
     field: Literal["option"] = "option"
