@@ -18,6 +18,21 @@ class InputImage(Input):
     class Config:
         title = "Input Image"
 
+class OverlayImage(Output):
+    name: Literal["overlayImage"] = "overlayImage"
+    value: Union[List[Image], Image]
+    type: str = "object"
+    @validator("type", pre=True, always=True)
+    def set_type_based_on_value(cls, value, values):
+        value = values.get('value')
+        if isinstance(value, Image):
+            return "object"
+        elif isinstance(value, list):
+            return "list"
+
+    class Config:
+            title = "Overlay Image"
+
 class OutputImage(Output):
     name: Literal["outputImage"] = "outputImage"
     value: Union[List[Image], Image]
@@ -173,7 +188,7 @@ class ConfigBlendMode(Config):
 
 class MixerInputs(Inputs):
     mainImage: InputImage
-    overlayImage: InputImage
+    overlayImage: OverlayInputImage
 
 class MixerConfigs(Configs):
     blendMode: ConfigBlendMode

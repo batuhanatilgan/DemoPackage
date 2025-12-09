@@ -1,6 +1,4 @@
-"""
-    Brightness Executor: Handles image brightness adjustment.
-"""
+
 import os
 import cv2
 import sys
