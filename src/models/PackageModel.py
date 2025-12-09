@@ -18,7 +18,7 @@ class InputImage(Input):
     class Config:
         title = "Input Image"
 
-class OverlayImage(Input):
+class OverlayInputImage(Input):
     name: Literal["overlayImage"] = "overlayImage"
     value: Union[List[Image], Image]
     type: str = "object"
