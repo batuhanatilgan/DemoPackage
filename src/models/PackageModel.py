@@ -187,15 +187,15 @@ class ConfigBlendMode(Config):
     class Config: title = "Blending Mode"
 
 class MixerInputs(Inputs):
-    mainImage: InputImage
-    overlayImage: OverlayInputImage
+    inputImage: InputImage
+    overlayInputImage: OverlayInputImage
 
 class MixerConfigs(Configs):
     blendMode: ConfigBlendMode
 
 class MixerOutputs(Outputs):
     outputImage: OutputImage
-    processInfo: OutputInfo
+    outputInfo: OutputInfo
 
 class MixerRequest(Request):
     inputs: Optional[MixerInputs]
