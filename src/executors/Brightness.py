@@ -22,7 +22,6 @@ class Brightness(Component):
         self.load_parameters()
 
     def load_parameters(self):
-        """Parametreleri çeken yardımcı metod"""
         self.brightness_val = self.request.get_param("BrightnessValue")
         self.preset_sel = self.request.get_param("PresetSelection")
 
@@ -31,7 +30,6 @@ class Brightness(Component):
         return {}
 
     def process_brightness(self, image):
-        """Görüntü işleme mantığı"""
         factor = 1.0
 
         if self.brightness_val is not None:
