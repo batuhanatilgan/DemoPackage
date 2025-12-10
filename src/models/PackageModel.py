@@ -188,7 +188,7 @@ class ConfigBlendMode(Config):
 
 class MixerInputs(Inputs):
     inputImage: InputImage
-    overlayInputImage: OverlayInputImage
+    overlayImage: OverlayInputImage
 
 class MixerConfigs(Configs):
     blendMode: ConfigBlendMode
