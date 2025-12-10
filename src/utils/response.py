@@ -41,7 +41,7 @@ def build_response_mixer(context):
     output_info = OutputInfo(value=context.outputInfo)
     mixer_outputs = MixerOutputs(
         outputImage=output_img,
-        processInfo=output_info
+        outputInfo=output_info
     )
     mixer_response = MixerResponse(outputs=mixer_outputs)
     mixer_executor = MixerExecutor(value=mixer_response)
